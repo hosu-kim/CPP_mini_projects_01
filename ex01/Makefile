@@ -1,7 +1,7 @@
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 NAME = zombie
-SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp # 소스 파일들
+SRCS = main.cpp Zombie.cpp zombieHorde.cpp # 소스 파일들
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

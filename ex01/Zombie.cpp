@@ -15,3 +15,4 @@ void randomChump(std::string name) {
 	Zombie a_zombie(name);
 	a_zombie.announce();
 }
+
