@@ -12,5 +12,7 @@ int main() {
 	for (int i=0; i<n; i++) {
 		zombies[i].announce();
 	}
+	// delete[]는 배열 안 모든 객체의 소멸자를 호출하고
+	// 할당된 메모리를 해제한다. 
 	delete[] zombies;
 }
