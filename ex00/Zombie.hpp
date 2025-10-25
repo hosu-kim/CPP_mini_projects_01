@@ -11,6 +11,7 @@ class Zombie {
 	public:
 		Zombie();
 		Zombie(std::string name); // 생성자
+		// 소멸자
 		~Zombie() {
 			std::cout << name << ": destroyed "<< std::endl;
 		}
