@@ -1,3 +1,5 @@
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 #include <string>
 
 // 1. Implement a Weapon class that has:
@@ -16,4 +18,6 @@ class Weapon {
 		Weapon();
 		const std::string& getType() const;
 		void setType(const std::string& new_value);
-}
+};
+
+#endif

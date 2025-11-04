@@ -1,3 +1,5 @@
+#ifndef ZOMBIE_HPP
+#define ZOMEBIE_HPP
 #include <string>
 #include <iostream>
 #include <ostream>
@@ -27,3 +29,5 @@ Zombie* newZombie(std::string name);
 
 // This function creates a zombie, names it, and makes it announce itself.
 void randomChump(std::string name);
+
+#endif
