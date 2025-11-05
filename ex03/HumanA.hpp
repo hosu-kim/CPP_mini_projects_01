@@ -1,4 +1,6 @@
 #include "Weapon.hpp"
+#include <iostream>
+
 // 2. Create two classes: **HumanA** and **HumanB**.
 //    a. They both have a Weapon and a name.
 //    b. They also have a member function attack()
@@ -10,8 +12,10 @@
 class HumanA {
 	private:
 		std::string name;
-		Weapon weapon_type;
+		Weapon& weapon_type;
 	public:
-		HumanA(const std::string& name, const Weapon& weapon_type);
+		HumanA(const std::string& name, Weapon& weapon_type);
+		// a member function attack()
+		// that displays: `<name> attacks with their <weapon type>`
 		void attack() const;
 };
