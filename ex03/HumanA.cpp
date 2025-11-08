@@ -8,5 +8,5 @@ HumanA::HumanA(const std::string& name, Weapon& weapon_type)
 // that displays:
 // `<name> attacks with their <weapon type>`
 void HumanA::attack() const {
-	std::cout << name << "attacks with their" << weapon_type << std::endl;
+	std::cout << name << " attacks with their " << weapon_type.getType() << std::endl;
 }

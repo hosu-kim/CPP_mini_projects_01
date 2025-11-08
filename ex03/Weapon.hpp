@@ -15,7 +15,7 @@ class Weapon {
 		// 1a. A private attribute `type`, which is a string.
 		std::string type;
 	public:
-		Weapon();
+		Weapon(std::string weapon);
 		const std::string& getType() const;
 		void setType(const std::string& new_value);
 };

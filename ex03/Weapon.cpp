@@ -1,6 +1,6 @@
 #include "Weapon.hpp"
 
-Weapon::Weapon() {
+Weapon::Weapon(std::string weapon): type(weapon) {
 }
 
 // 1b. A getType() member function that
