@@ -8,9 +8,9 @@ void HumanB::setWeapon(Weapon& weapon) {
 }
 
 void HumanB::attack() const {
-	if (weapon_type == nullptr) {
-		std::cout << "can't attack without a weapon." << std::endl;
+	if (weapon_type == NULL) {
+		std::cout << name << "can't attack without a weapon." << std::endl;
 	} else {
-		std::cout << " attacks with their " << weapon_type->getType() << std::endl;
+		std::cout << name << " attacks with their " << weapon_type->getType() << std::endl;
 	}
 }
