@@ -1,5 +1,6 @@
-#include <iostream>
-#include <fstream>
+#include <iostream> // cout
+#include <fstream> // ifstream
+#include <string> // find
 
 
 // [X] 1. Create a program that takes three parameters in the following order:
@@ -12,8 +13,11 @@ int main(int argc, char* argv[]) {
 
 	if (argc != 4)
 		return (1);
+
+	std::string filename(argv[1]);
+	std::string s1(argv[2]);
 	
-	std::ifstream file(argv[1]);
+	std::ifstream file(filename);
 
 	if (!file.is_open()) {
 		std::cout << "Failed to open file." << std::endl;
@@ -22,9 +26,12 @@ int main(int argc, char* argv[]) {
 	
 	std::string line;
 	while (getline(file, line)) {
-
+		size_t s1_position = line.find("")
 	}
 
 	file.close();
 	return (0);
 }
+
+// stdLLstring::find)()를 사용하면 문자열을 찾을 수 있음.
+// std::string::replace는 금지되었으므로 구현해야 함.
