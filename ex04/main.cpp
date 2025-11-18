@@ -16,6 +16,7 @@ int main(int argc, char* argv[]) {
 
 	std::string filename(argv[1]);
 	std::string s1(argv[2]);
+	std::string s2(argv[3]);
 	
 	std::ifstream file(filename);
 
@@ -26,12 +27,19 @@ int main(int argc, char* argv[]) {
 	
 	std::string line;
 	while (getline(file, line)) {
-		size_t s1_position = line.find("")
+		size_t s1_position = line.find("s1");
 	}
 
 	file.close();
 	return (0);
 }
 
-// stdLLstring::find)()를 사용하면 문자열을 찾을 수 있음.
+// std::string::find를 사용하면 문자열을 찾을 수 있음.
 // std::string::replace는 금지되었으므로 구현해야 함.
+// std::string::replace 구현
+//   1. 동작 방식
+//      - original.replace(pos, len, new_str);
+//        1. pos: 교체를 시작할 위치
+//        2. len: pos 위치에서부터 지울 문자의 개수
+//        3. new_str: 지워진 자리에 새로 삽입될 문자
+//   2. 
