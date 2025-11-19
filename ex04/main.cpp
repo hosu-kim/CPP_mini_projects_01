@@ -24,7 +24,7 @@ int main(int argc, char* argv[]) {
 		std::cout << "Failed to open file." << std::endl;
 		return (1);
 	}
-	
+
 	std::string line;
 	while (getline(file, line)) {
 		size_t s1_position = line.find("s1");
