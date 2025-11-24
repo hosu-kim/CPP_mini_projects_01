@@ -1,7 +1,7 @@
 CXX = c++
 CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 NAME = sed_is_for_losers
-SRCS = main.cpp
+SRCS = main.cpp utils.cpp sed_is_for_losers.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
@@ -14,7 +14,7 @@ $(NAME): $(OBJS)
 clean:
 	rm -f $(OBJS)
 
-fclea: clean
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all

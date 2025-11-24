@@ -1,4 +1,4 @@
-#include <string>
+#include "sed_is_for_losers.hpp"
 
 std::string replaceSubstring(const std::string& str, const std::string& from, const std::string to) {
 	std::string result = str;

@@ -1,7 +1,4 @@
-#include <iostream> // cout
-#include <fstream> // ifstream
-#include <string> // find
-
+#include "sed_is_for_losers.hpp"
 
 // [X] 1. Create a program that takes three parameters in the following order:
 //    a filename and two strings, s1 and s2.
@@ -18,19 +15,28 @@ int main(int argc, char* argv[]) {
 	std::string s1(argv[2]);
 	std::string s2(argv[3]);
 	
-	std::ifstream file(filename);
+	std::ifstream file(filename.c_str());
 
 	if (!file.is_open()) {
-		std::cout << "Failed to open file." << std::endl;
+		std::cout << "Failed to open file.\n";
 		return (1);
 	}
 
-	std::string line;
-	while (getline(file, line)) {
-		size_t s1_position = line.find("s1");
-	}
+	std::string replaced_str = replaceSubstring(filename, s1, s2);
 
 	file.close();
+
+	std::ofstream replace_file((filename + ".replace").c_str());
+
+	if (!replace_file) {
+		std::cout << "Failed to open file.\n";
+		return (1);
+	}
+
+	replace_file << replaced_str;
+
+	replace_file.close();
+
 	return (0);
 }
 
@@ -42,4 +48,3 @@ int main(int argc, char* argv[]) {
 //        1. pos: 교체를 시작할 위치
 //        2. len: pos 위치에서부터 지울 문자의 개수
 //        3. new_str: 지워진 자리에 새로 삽입될 문자
-//   2. 
