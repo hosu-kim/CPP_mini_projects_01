@@ -22,7 +22,12 @@ int main(int argc, char* argv[]) {
 		return (1);
 	}
 
-	std::string replaced_str = replaceSubstring(filename, s1, s2);
+	std::ostringstream ss;
+	ss << file.rdbuf();
+	std::string content = ss.str();
+
+
+	std::string replaced_str = replaceSubstring(content, s1, s2);
 
 	file.close();
 

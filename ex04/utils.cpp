@@ -1,8 +1,11 @@
 #include "sed_is_for_losers.hpp"
 
-std::string replaceSubstring(const std::string& str, const std::string& from, const std::string to) {
+std::string replaceSubstring(const std::string& str, const std::string& from, const std::string& to) {
 	std::string result = str;
 	size_t pos = 0;
+
+	if (from.empty())
+		return (str);
 
 	while ((pos = result.find(from, pos)) != std::string::npos) {
 		result.erase(pos, from.length());
@@ -10,5 +13,5 @@ std::string replaceSubstring(const std::string& str, const std::string& from, co
 		pos += to.length();
 	}
 
-	return result;
+	return (result);
 }
