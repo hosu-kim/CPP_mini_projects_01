@@ -8,8 +8,10 @@
 //     All the member functions of the class std::string are allowed, except replace.
 int main(int argc, char* argv[]) {
 
-	if (argc != 4)
+	if (argc != 4) {
+		std::cout << "Incorrent command line arguments provided. Program ended.\n";
 		return (1);
+	}
 
 	std::string filename(argv[1]);
 	std::string s1(argv[2]);
@@ -25,7 +27,6 @@ int main(int argc, char* argv[]) {
 	std::ostringstream ss;
 	ss << file.rdbuf();
 	std::string content = ss.str();
-
 
 	std::string replaced_str = replaceSubstring(content, s1, s2);
 
