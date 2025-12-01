@@ -59,6 +59,7 @@ void Harl::complain(std::string level) {
 
 	for (int i = 0; i < 4; i++) {
 		if (levels[i] == level) {
+			// `()`: I'm a call button of functions.
 			(this->*ptr[i])();
 			return;
 		}
