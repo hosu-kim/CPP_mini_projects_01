@@ -39,7 +39,7 @@ void Harl::complain(std::string level) {
 	// string array
 	std::string levels[4] = { "DEBUG", "INFO", "WARNING", "ERROR" };
 
-	// void (Harl::*ptr[4])(void)
+	// `void (Harl::*ptr[4])(void)`
 	//   1. `ptr[4]`:
 	//      I'm an array named `ptr` of size 4.
 	//   2. `*ptr[4]`:
@@ -59,7 +59,11 @@ void Harl::complain(std::string level) {
 
 	for (int i = 0; i < 4; i++) {
 		if (levels[i] == level) {
-			// `()`: I'm a call button of functions.
+			// `(this->*ptr[i])()`
+			//   1. `()`:
+			//      I'm a call button of functions.
+			//   2. `this->`:
+			//      I must be used to call function pointers.
 			(this->*ptr[i])();
 			return;
 		}
