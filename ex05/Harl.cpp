@@ -36,8 +36,24 @@ void Harl::error(void) {
 }
 
 void Harl::complain(std::string level) {
+	// string array
 	std::string levels[4] = { "DEBUG", "INFO", "WARNING", "ERROR" };
 
+	// void (Harl::*ptr[4])(void)
+	//   1. `ptr[4]`:
+	//      I'm an array named `ptr` of size 4.
+	//   2. `*ptr[4]`:
+	//      That array holds **pointers**.
+	//   3. `Harl::*`:
+	//      But they aren't just regular pointers.
+	//      They point to members of the `Harl` class.
+	//   4. `(void)`:
+	//      Those functions take no parameters.
+	//   5. `void`(at the start):
+	//      And they return no value when executed.
+	//   6. `void (my name)(void)`:
+	//      I'm a function pointer sandwithched 
+	//      between the return type and the parameters.
 	void (Harl::*ptr[4])(void) = { &Harl::debug, &Harl::info,
 								  &Harl::warning, &Harl::error };
 
