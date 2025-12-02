@@ -41,7 +41,9 @@ int main(int argc, char* argv[]) {
 
 	replace_file << replaced_str;
 
-	replace_file.close();
+	replace_file.close(); // RAII 때문에 없어도 됨.
+						  // (Resource Acquisition Is Initialization)
+						  // 객체가 만들어질 때 자원을 얻고, 사라질 때 자동으로 자원을 정리한다.
 
 	return (0);
 }
